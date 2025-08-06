@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  attack-path-agent:
+    build: .
+    container_name: attack-path-agent
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    restart: unless-stopped
+ 
